@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_demande_materiel,demande_materiel,model_demande_materiel,base.group_user,1,1,1,1
+access_ligne_materiel,ligne_materiel,model_ligne_materiel,base.group_user,1,1,1,1
+access_ligne_groupage,ligne_groupage,model_ligne_groupage,base.group_user,1,1,1,1
+access_decaissement_journalier,decaissement_journalier,model_decaissement_journalier,base.group_user,1,1,1,1
+access_encaissement_journalier,encaissement_journalier,model_encaissement_journalier,base.group_user,1,1,1,1

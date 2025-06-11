@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<odoo>
+
+    <template id="caisse_dematco">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+			 
+			<br/><br/>
+			<br/><br/>
+			
+			
+               <div class="page" >
+			  
+			   <div class="oe_structure"/>
+			    <h3 align="center" >NUMERO<b><span t-field="o.name"/></b></h3>
+				
+                <div class="oe_structure"/>			   
+                
+			    
+                    <table class="table table-condensed table-striped table-bordered table-hover">
+                        <thead>
+                            <tr align="center">
+
+								<th>DATE</th>
+								<th>MOTIF DE PAIEMENT </th>
+                                <th>CENTRE DE FRAIS </th>
+                                <th>PARTENAIRE </th>
+                                 <th>DEVISE </th>
+                                 <th>MONTANT </th>
+                               
+								
+                            </tr>
+                        </thead>
+                        <tbody>
+                     
+							
+                        </tbody>
+						<tbody>
+                            <tr align="center">
+                                
+                                 <td><span t-esc="o.date"/></td>
+                                 <td><span t-esc="o.libelle"/></td>
+                                  <td><span t-esc="o.centre_frais"/></td>
+                                 <td><span t-esc="o.partner_id.name"/></td>
+                                
+                                 <td><span t-esc="o.devise"/></td>
+                                  <td><span t-esc="o.montant"/></td>
+                                
+								
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    
+
+                
+                <table class="table table-condensed table-striped table-bordered table-hover">
+                        <thead>
+                            <tr align="center">
+
+								<th>NOM</th>
+								<th>DATE</th>
+                                <th>SIGNATURE </th>
+                               
+								
+                            </tr>
+                        </thead>
+                        <tbody>
+                     
+							
+                        </tbody>
+						
+                    </table>
+					
+					
+					
+					
+					
+                        
+                    
+					
+                </div>
+            </t>
+        </t>
+    </t>
+    </template>
+
+
+
+
+
+	
+
+</odoo>

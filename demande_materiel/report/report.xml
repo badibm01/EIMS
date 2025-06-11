@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<odoo>
+	
+
+
+
+	
+	<report
+	    id="report_tranfert"
+		string="TRANSFERT"
+		model="decaissement.journalier"
+		report_type="qweb-pdf"
+		name="demande_materiel.tranfert_dematco"
+		file="demande_materiel.tranfert_dematco"/>
+
+	<report
+	    id="report_caisse_dematco"
+		string="Bon de Caisse"
+		model="encaissement.journalier"
+		report_type="qweb-pdf"
+		name="demande_materiel.caisse_dematco"
+		file="demande_materiel.caisse_dematco"/>
+
+
+	<report
+	    id="report_bonpourjust_dematco"
+		string="Justification Bon Pour"
+		model="decaissement.journalier"
+		report_type="qweb-pdf"
+		name="demande_materiel.bonpourjust_dematco"
+		file="demande_materiel.bonpourjust_dematco"/>
+
+		
+
+	
+	<report
+	    id="report_retourcaisse_dematco"
+		string="Retour Bon Pour"
+		model="decaissement.journalier"
+		report_type="qweb-pdf"
+		name="demande_materiel.retourcaisse_dematco"
+		file="demande_materiel.retourcaisse_dematco"/>
+
+	<report
+	    id="report_bonpour_dematco"
+		string="Bon Pour"
+		model="decaissement.journalier"
+		report_type="qweb-pdf"
+		name="demande_materiel.bonpour_dematco"
+		file="demande_materiel.bonpour_dematco"/>
+
+	<report
+	    id="report_depense_dematco"
+		string="Depenses"
+		model="decaissement.journalier"
+		report_type="qweb-pdf"
+		name="demande_materiel.depense_dematco"
+		file="demande_materiel.depense_dematco"/>
+
+
+	<report
+	    id="report_change_dematco"
+		string="Change"
+		model="decaissement.journalier"
+		report_type="qweb-pdf"
+		name="demande_materiel.change_dematco"
+		file="demande_materiel.change_dematco"/>
+
+	
+	
+
+</odoo>

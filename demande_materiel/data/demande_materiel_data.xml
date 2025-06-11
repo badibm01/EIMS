@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        
+        
+        <!-- Sequences for Demande matiere -->
+       
+
+         <!-- Sequences for Demande Achat -->
+     
+
+         <record id="seq_demande_materiel" model="ir.sequence">
+            <field name="name">Demande Materiel </field>
+            <field name="code">demande.materiel</field>
+            <field name="prefix">Req/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+
+       
+
+    </data>
+</odoo>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<odoo>
+
+    <template id="livraison_dematco">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+			 
+			<br/><br/>
+			<br/><br/>
+			
+			
+               <div class="page" >
+			  
+			   <div class="oe_structure"/>
+			    <h3 align="left" ><b><span t-field="o.name"/></b></h3>
+				
+                <div class="oe_structure"/>			   
+                <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
+						<t t-set="address">
+							
+							<br/><br/>
+							<br/><br/>
+						<div t-field="o.partner_id"
+						t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
+						<p t-if="o.partner_id.vat"><t t-esc="o.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="o.partner_id.vat"/>
+						</p>
+					   </t>    
+			    
+                    <table class="table table-condensed table-striped table-bordered table-hover">
+                        <thead>
+                            <tr align="center">
+
+								<th>DATE</th>
+								<th>Emplacement d'origine </th>
+                                <th>Emplacement de destination</th>
+								<th>Document d'origine</th>
+								
+                            </tr>
+                        </thead>
+                        <tbody>
+                     
+							
+                        </tbody>
+						<tbody>
+                            <tr align="center">
+                                
+                                <td><span t-esc="o.scheduled_date"/></td>
+                                 <td><span t-esc="o.location_id.name"/></td>
+                                <td><span t-esc="o.location_dest_id.name"/></td>
+                               
+                                <td><span t-esc="o.origin"/></td>
+								
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-condensed table-striped table-bordered table-hover">
+                        
+						<thead>
+                            <tr align="center" class="border-black">
+                                
+                                <th>Produit </th>
+								<th>Commandé</th>
+								<th>Livré</th>
+								
+                                
+								
+								
+								
+                            </tr>
+                        </thead>
+						<tbody>
+                            <tr t-foreach="o.move_line_ids_without_package"  t-as="rapport_ligne">
+                                
+								<td align="left"><span t-field="rapport_ligne.product_id.name"/></td>
+								<td align="center"><span t-field="rapport_ligne.reserved_qty"/></td>
+								<td align="center"><span t-field="rapport_ligne.qty_done"/></td>
+								
+                                
+                               
+                            </tr>
+                        </tbody> 
+                    </table>
+					
+					
+					
+					
+					
+                        
+                    
+					
+                </div>
+            </t>
+        </t>
+    </t>
+    </template>
+
+
+
+
+
+	
+
+</odoo>
